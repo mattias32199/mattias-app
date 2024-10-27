@@ -5,14 +5,17 @@
 <!-- <svelte:body use:cssVariables={{ background: '#0a0908' }} /> -->
 
 <!-- Navbar component, passing the current page's pathname as a prop. -->
-<Navbar/>
+<!-- <Navbar/> --> 
 
 <!-- Where the child components go e.g. +page.svelte -->
 <slot />
 
 <style>
-    * {
-	    box-sizing: border-box;
+
+    @font-face {
+        font-family: "Bajern";
+        font-display: block;
+        src: url('/fonts/Bajern.otf') format('opentype');
     }
 
     @font-face {
@@ -21,15 +24,9 @@
         src: url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
     }
 
-    :global(#svelte) {
-		width: 100vw;
-		height: 100%;
-		max-width: 900px;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+    :global(*) {
+	    box-sizing: border-box;
+    }
 
     :global(html),
 
